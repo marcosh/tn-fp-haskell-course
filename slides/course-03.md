@@ -475,7 +475,6 @@ How to build functions from:
 How to compose functions:
 
 - `(&)`: chain
-- `(<&>)`: chain in presence of wrapping
 - `Functor`, `map`
 
 Functional toolbox:
@@ -498,7 +497,8 @@ Functional toolbox:
 
 ```shell
 > import Data.Functor
-> :type (<&>)
+> :type (
+)
 (<&>) :: Functor f => f a -> (a -> b) -> f b
 > :type fmap
 fmap :: Functor f => (a -> b) -> f a -> f b
