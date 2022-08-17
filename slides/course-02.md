@@ -91,7 +91,7 @@ True
 True
 ```
 
-- The disequality operator is not `!=`, it's `/=`
+- The inequality operator is not `!=`, it's `/=`
 
 ???
 
@@ -285,7 +285,7 @@ instance Collection [] where
 
 ```hs
 -- | To require a parameter to implement a class,
--- mention the class to the left of >=
+-- mention the class to the left of =>
 printSize :: Collection t => t a -> IO ()
 printSize t = do
   putStrLn (show (size t))
@@ -527,7 +527,7 @@ class Functor where
 
 <br/>
 
-- What properties have these classes? 🧱
+- What properties do these classes have? 🧱
 
 ???
 
