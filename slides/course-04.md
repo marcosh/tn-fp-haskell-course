@@ -75,9 +75,9 @@ Genericity in Haskell is twofold:
 ```hs
 -- | Types whose values can be compared.
 -- Expected to have the following properties:
--- Reflexivity: @x == x@ is @True@
--- Symmetry:    @x == y@ is @y == x@
--- etc.
+-- Reflexivity:  @x == x@ is @True@
+-- Symmetry:     @x == y@ is @y == x@
+-- Transitivity: @x == y && y == z@ implies @x == z@
 class Eq a where
   (==) :: a -> a -> Bool
   (/=) :: a -> a -> Bool
@@ -280,7 +280,7 @@ instance Semigroup BankAction where
 class Semigroup a => Monoid a where
   -- | The neutral element
   mempty :: a
-  -- | Merging operation
+  -- | Merging operation, coincides with `<>`
   mappend :: a -> a -> a
   -- | Reduction, has a default implementation
   mconcat :: [a] -> a
